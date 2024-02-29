@@ -2,10 +2,10 @@
   <nav class="flex items-center justify-between flex-wrap">
     <div class="flex items-center flex-no-shrink text-white mr-6">
       <% logo_path = current_user ? dashboard_index_path : root_path %>
-      <%= link_to logo_path, class:"flex items-center hover:opacity-80" do %>
-        <%= image_tag "avatar.png",  style: "max-height: 42px" %>
-        <span class="font-semibold text-xl tracking-tight text-primary-600"><%= ENV['COMPANY_NAME'] %></span>
+      <%= link_to logo_path do %>
+        <%= image_tag "logo.png",  style: "max-height: 35px" %>
       <% end %>
+      <span class="font-semibold text-xl tracking-tight"><%= ENV['company_name'] %></span>
     </div>
     <div class="block sm:hidden">
       <button class="navbar-burger flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white" data-action="click->header#toggleMobileNav">
@@ -18,13 +18,10 @@
     <div id="main-nav" class="w-full flex-grow sm:flex text-right sm:w-auto hidden" data-header-target="mainNav">
       <div class="text-sm sm:flex-grow">
         <% nav_link_classes = 'ml-8 whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900' %>
-  <%# TODO: ensure only admin can see Admin link! %>
+        <%# TODO: ensure only admin can see Admin link! %>
         <a class="<%= nav_link_classes %>" href="/admin">Admin</a>
         <a class="<%= nav_link_classes %>" href="/dashboard">Dashboard</a>
         <a class="<%= nav_link_classes %>" href="/logout">Logout</a>
-      </div>
-    </div>
-  </nav>
       </div>
     </div>
   </nav>
