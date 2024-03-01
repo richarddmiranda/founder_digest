@@ -1,5 +1,4 @@
 <%= render partial: "shared/heading", locals: { title: 'Apply to Founder Digest', tagline: 'Each submission is manually reviewed by our team within 24 hours.' } %>
-<p>Plan Chosen: <%= params[:plan] %> </p>
 <div class="max-w-sm mx-auto">
   <%= form_for UserSubmission.new do |form| %>
     <% #space-y-8 %>
