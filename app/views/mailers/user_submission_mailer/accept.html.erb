@@ -1,10 +1,7 @@
 <p>Hi <%= @name %>,</p>
 <p>We've reviewed your application for Founder Digest and we're happy to let you know we've approved it.</p>
-<p>Get started <a href = "<%= ENV['BASE_URL'] + '/users/sign_in' %>">here:</a><br>
+<p>Get started <a href = "<%= ENV['BASE_URL'] + '/magic_login?auth_code=' + @auth_code %>">here:</a><br>
 </p>
-<ul>
-  <li>Username: <%= @email %></li>
-  <li>Password: <%= @password %></li>
-</ul>
+
 
 <p>The Founder Digest Team</p>
