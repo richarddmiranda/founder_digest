@@ -1,6 +1,6 @@
 class ApplicationMailer < ActionMailer::Base
   layout 'mailer'
-  default from: '"Support Team" <support@speedrail.com>'
+  default from: '"Support Team" <richard@easyappshq.com>'
 
   # rubocop:disable Lint/MissingSuper
   def self.inherited(subclass)
