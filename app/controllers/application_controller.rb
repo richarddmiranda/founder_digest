@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   # before_action :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(resource)
-    resource.paying_customer? ? dashboard_index_path : subscribe_index_path # point these wherever you want
+    start_path
+    # resource.paying_customer? ? dashboard_index_path : subscribe_index_path # point these wherever you want
   end
 
   def maybe_skip_onboarding

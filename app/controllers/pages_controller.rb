@@ -5,12 +5,16 @@ class PagesController < ApplicationController
 
   def apply; end
 
+  def thanks; end
+
   def start; end
 
   def logout
     sign_out(current_user)
     redirect_to root_path
   end
+
+
 
   def page
     @page_key = request.path[1..]

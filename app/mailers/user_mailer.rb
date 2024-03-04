@@ -1,8 +1,5 @@
 class UserMailer < ApplicationMailer
-  def welcome(user)
-    @user = user
-    mail(to: user.email, subject: "welcome to #{ENV['COMPANY_NAME']}!")
-  end
+
 
   def reminder_to_start_trial(user)
     @user = user
