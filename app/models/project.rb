@@ -3,4 +3,6 @@ class Project < ApplicationRecord
 
   has_many :stakeholder_updates
   has_many :subscribers
+
+  
 end

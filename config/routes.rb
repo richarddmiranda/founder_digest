@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :account, only: [:index, :update]
   resources :billing_portal, only: [:create]
   resources :user_submissions, only: [:create]
+  resources :projects, only: [:create]
   match '/billing_portal' => 'billing_portal#create', via: [:get]
   match '/cancel' => 'billing_portal#destroy', via: [:get]
 

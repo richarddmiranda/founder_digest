@@ -10,28 +10,28 @@
           <div class="sm:col-span-3">
             <label for="first_name" class="block text-sm font-medium text-gray-700">First name</label>
             <div class="mt-1">
-              <%= form.text_field :first_name, placeholder: 'Richard', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
+              <%= form.text_field :first_name, required: true, placeholder: 'Richard', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
             </div>
           </div>
 
           <div class="sm:col-span-3">
             <label for="last_name" class="block text-sm font-medium text-gray-700">Last name</label>
             <div class="mt-1">
-              <%= form.text_field :last_name, placeholder: 'Miranda', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
+              <%= form.text_field :last_name, required: true, placeholder: 'Miranda', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
             </div>
           </div>
 
           <div class="sm:col-span-6">
             <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
             <div class="mt-1">
-              <%= form.text_field :email, type: 'email', placeholder: 'richard@founder.com', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
+              <%= form.text_field :email, type: 'email', required: true, placeholder: 'richard@founder.com', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
             </div>
           </div>
 
           <div class="sm:col-span-6">
             <label for="website" class="block text-sm font-medium text-gray-700">Company Website</label>
             <div class="mt-1">
-              <%= form.text_field :website, type: 'url', placeholder: 'https://founder.com', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
+              <%= form.text_field :website, type: 'url', required: true, placeholder: 'https://founder.com', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
             </div>
           </div>
         </div>
@@ -42,16 +42,16 @@
           <legend class="contents text-base font-medium text-gray-900">What's your role?</legend>
           <div class="mt-4 space-y-4">
             <div class="flex items-center">
-              <%= form.radio_button :job_role, 'C-Suite', class: 'h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500' %>
-              <%= form.label :job_role, 'C-Suite', value: 'C-Suite', class: 'ml-3 block text-sm font-medium text-gray-700' %>
+              <%= form.radio_button :job_role,  'C-Suite', required: true, class: 'h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500' %>
+              <%= form.label :job_role, 'C-Suite',  value: 'C-Suite', class: 'ml-3 block text-sm font-medium text-gray-700' %>
             </div>
             <div class="flex items-center">
-              <%= form.radio_button :job_role, 'Founder', class: 'h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500' %>
-              <%= form.label :job_role, 'Founder', value: 'Founder', class: 'ml-3 block text-sm font-medium text-gray-700' %>
+              <%= form.radio_button :job_role, 'Founder', required: true, class: 'h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500' %>
+              <%= form.label :job_role, 'Founder',  value: 'Founder', class: 'ml-3 block text-sm font-medium text-gray-700' %>
             </div>
             <div class="flex items-center">
-              <%= form.radio_button :job_role, 'Employee', class: 'h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500' %>
-              <%= form.label :job_role, 'Employee', value: 'Employee', class: 'ml-3 block text-sm font-medium text-gray-700' %>
+              <%= form.radio_button :job_role, 'Employee', required: true, class: 'h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500' %>
+              <%= form.label :job_role, 'Employee',  value: 'Employee', class: 'ml-3 block text-sm font-medium text-gray-700' %>
             </div>
           </div>
         </fieldset>
@@ -62,7 +62,7 @@
         <label for="text" class="block text-sm font-medium text-gray-700">About</label>
         <div class="mt-1">
           <%# <textarea id="text" name="text" placeholder="Stakeholders,&#10;&#10;this month we worked primarily on..." rows="6" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea> %>
-          <%= form.text_area :text, placeholder: "Stakeholders, this month we worked primarily on...", rows: 6, class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
+          <%= form.text_area :text, required: true, placeholder: "Stakeholders, this month we worked primarily on...", rows: 6, class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
         </div>
         <p class="mt-2 text-sm text-gray-500">The more detailed, the more likely you'll be accepted.</p>
       </div>
@@ -77,3 +77,4 @@
   <% end %>
   
 </div>
+
