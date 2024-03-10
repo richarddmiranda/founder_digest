@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   before_action :authenticate_user!, only: [:start, :logout]
+  # before_action :set_project, only: [:start]
 
   def home; end
 
@@ -9,6 +10,10 @@ class PagesController < ApplicationController
 
   def start
     auth_code = params[:auth_code]
+    @project = current_user.projects.first
+    if (@project.title? && @project.description?)
+      redirect_to dashboard_index_path, notice: "You already created your project"
+    end
   end
 
   def magic_login

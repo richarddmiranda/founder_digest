@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+puts "Running Seeds...."
+user_count = User.count
+
+def websites
+  ["https://google.com", "https://instagram.com", "https://acape.la", "https://screen.studio", "https://easyappshq.com"].sample
+end
+def create_user_and_project!
+  user = User.create!(email: Faker::Internet.email, password: 'password')
+  user.projects.create!(title: "#{Faker::Company.name} newsletter", description: Faker::Company.catch_phrase, website: websites)
+end
+
+5.times do
+  create_user_and_project!
+end
+
+new_user_count = User.count - user_count
+puts "Created #{new_user_count} users."

@@ -39,6 +39,7 @@ group :development, :test do
   gem 'rubocop-factory_bot', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
+  gem 'faker', require: true
 end
 
 group :development do
@@ -49,7 +50,6 @@ end
 group :test do
   gem 'capybara'
   gem 'factory_bot_rails'
-  gem 'faker'
   gem 'rspec-rails', '6.0.3'
   gem 'selenium-webdriver'
   gem 'shoulda-callback-matchers'
