@@ -10,7 +10,7 @@ class PagesController < ApplicationController
 
   def start
     auth_code = params[:auth_code]
-    @project = current_user.projects.first
+    @project = current_user.default_project
     if (@project.title? && @project.description?)
       redirect_to dashboard_index_path, notice: "You already created your project"
     end
