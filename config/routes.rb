@@ -13,13 +13,15 @@ Rails.application.routes.draw do
   # resources :dashboard, only: [:index]
   get 'dashboard', to: 'dashboard#index', as: :dashboard_index
 
-  get 'stakeholder_updates/new', to: 'stakeholder_updates#new'
+  
+  resources :stakeholder_updates, only: [:new, :create, :show]
 
   resources :account, only: [:index, :update]
   resources :billing_portal, only: [:create]
   resources :user_submissions, only: [:create]
   resources :projects, only: [:update]
   resources :subscribers
+
   delete '/subscribers', to: 'subscribers#destroy'
 
   match '/billing_portal' => 'billing_portal#create', via: [:get]

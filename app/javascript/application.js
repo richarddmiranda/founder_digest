@@ -46,3 +46,6 @@ addEventListener("trix-initialize", (event) => {
   `
   );
 });
+
+import "trix"
+import "@rails/actiontext"
